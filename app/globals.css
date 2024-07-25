@@ -1,33 +1,42 @@
 @tailwind base;
+/* Tailwind CSS 基本樣式 */
 @tailwind components;
+/* Tailwind CSS 組件樣式 */
 @tailwind utilities;
+/* Tailwind CSS 工具樣式 */
 
 :root {
   --foreground-rgb: 0, 0, 0;
+  /* 預設前景色（黑色） */
   --background-start-rgb: 214, 219, 220;
+  /* 背景漸變開始色（淺灰） */
   --background-end-rgb: 255, 255, 255;
+  /* 背景漸變結束色（白色） */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
+    /* 深色模式前景色（白色） */
     --background-start-rgb: 0, 0, 0;
+    /* 深色模式背景開始色（黑色） */
     --background-end-rgb: 0, 0, 0;
+    /* 深色模式背景結束色（黑色） */
   }
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  /* 使用 CSS 變量設定文本顏色 */
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  /* 背景設置為從透明到結束色的漸變，疊加開始色 */
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+    /* 新增一個自定義的 Tailwind 工具類 */
   }
 }
