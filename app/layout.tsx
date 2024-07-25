@@ -16,7 +16,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body> {/* 應用 Inter 字體 */}
+      {/* 應用 Inter 字體 */}
+      <body className={inter.className}>{children}</body> 
     </html>
   );
 }

@@ -28,9 +28,9 @@
 body {
   color: rgb(var(--foreground-rgb));
   /* 使用 CSS 變量設定文本顏色 */
-  background: linear-gradient(to bottom,
+  /* background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb)); */
   /* 背景設置為從透明到結束色的漸變，疊加開始色 */
 }
 
