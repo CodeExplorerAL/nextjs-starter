@@ -9,6 +9,14 @@ const config = {
   // 測試環境初始化後要運行的文件，這裡添加了 @testing-library/jest-dom
   setupFilesAfterEnv: ['@testing-library/jest-dom'],
 
+  // 配置測試報告插件，生成 HTML 測試報告
+  reporters: [
+    "default",
+    ["jest-html-reporter", {
+      "pageTitle": "Test Report"
+    }]
+  ],
+
   // 配置文件轉換器，用於處理 TypeScript 和 JavaScript 文件
   transform: {
     // 使用 ts-jest 轉換 .ts 和 .tsx 文件
