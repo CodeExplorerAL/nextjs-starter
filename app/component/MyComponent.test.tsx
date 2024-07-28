@@ -9,8 +9,3 @@ test('renders hello world text', () => {
   expect(screen.getByText('Hello, World!')).toBeInTheDocument();
 });
 
-// 錯誤的測試
-test('renders incorrect text', () => {
-  render(<MyComponent />);
-  expect(screen.getByText('Hello, John!')).toBeInTheDocument(); // 這裡期望的文本是錯誤的
-});
