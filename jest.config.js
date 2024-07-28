@@ -19,10 +19,7 @@ const config = {
 
   // 配置文件轉換器，用於處理 TypeScript 和 JavaScript 文件
   transform: {
-    // 使用 ts-jest 轉換 .ts 和 .tsx 文件
-    '^.+\\.(ts|tsx)?$': 'ts-jest',
-    // 使用 babel-jest 轉換 .js 和 .jsx 文件
-    '^.+\\.(js|jsx)?$': 'babel-jest',
+  '^.+\\.(ts|tsx|js|jsx)$': ['babel-jest', { presets: ['next/babel'] }],
   },
 
   // 配置 Jest 可以解析的文件擴展名
